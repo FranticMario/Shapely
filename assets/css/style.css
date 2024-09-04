@@ -297,22 +297,19 @@ a:hover {
 }
 
 .img__block{
-
-    flex: 1 1 25%; /* Растягивает изображения, чтобы занимать 1/4 ширины родителя, учитывая отступы */
-    max-width: 25%; /* Гарантирует, что изображения не будут превышать 25% ширины родителя */
+    flex: 1 1 25%;
+    max-width: 25%;
     height: auto;
+    width: 24.09375rem;
     margin-bottom: 7.29rem;
    
 }
 
 .latest__img {
+    height: auto;
     width: 100%;
- 
 }
 
-.latest__img:hover {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(34, 34, 34, 0.9) 100%);
-}
 
 .img__title-hover {
     text-align: center;
@@ -417,3 +414,63 @@ a:hover {
 
 
 
+
+.img__title-hover {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+    z-index: 1000;
+}
+
+
+.img__block {
+    display: block; 
+    position: relative; 
+
+}
+
+.img__block::before {
+    cursor: pointer;
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(34, 34, 34, 0.9) 100%); 
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Добавьте плавный переход для наглядности */
+}
+
+.img__block:hover::before {
+    opacity: 1;
+}
+
+.img__title-hover {
+    opacity: 0;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.img__block:hover .img__title-hover {
+    opacity: 1;
+    animation: 0.5s show ease;
+   
+}
+
+
+@keyframes show {
+    0% {
+        bottom: 0%; /* Начальная позиция - за пределами экрана снизу */
+        opacity: 0; /* Элемент невидим в начале */
+    }
+    100% {
+        bottom: 50%; /* Конечная позиция - на своем месте */
+        opacity: 1; /* Элемент полностью видим */
+    }
+
+  }
+
+  
