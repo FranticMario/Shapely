@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+header {
+    height: 76px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    color: #8C979E;
+    font-family: Raleway;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; 
+}
+
+h3 {
+    color: #0E1015;
+    font-family: Raleway;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.0625rem; /* 110% */
+}
+
+img {
+    display: block;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 auto;
+    display: flex;
+    width: 1512px;
+    height: 77px;
+    padding: 10px 186px 11px 186px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 11px 0;
+    width: 1140px;
+    height: 56px;
+    
+}
+
+.link {
+    color: #4C4C4C;
+    font-family: Raleway;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 53px; /* 407.692% */
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    }
+
+.logo {
+    font-family: Raleway;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 52px;
+}
+
+.logo:hover {
+    color: #333;
+}
+
+.menu {
+    color: #333;
+    display: flex;
+    gap: 31px;
+    padding: 0px 11px 0px 30px;
+}
+
+a:hover {
+    color: #337ab7;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: url('../img/photo-1443527216320-7e744084f5a7-1.jpg.jpg') no-repeat center/cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1027px;
+}
+
+.main__heading {
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px; /* 106.667% */
+    margin-bottom: 25px;
+}
+
+.main__subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    margin: 36px;
+}
+
+.btn {
+    color: #FFF;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 200% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.btn__read-more {
+    padding: 15px 61.188px 15px 60.813px;
+    border: 2px #745CF9;
+    background: #745CF9;
+}
+
+.btn__read-more:hover {
+    background: #5d47d7;
+    border-color: #5d47d7;
+    color: #fff;
+}
+
+.btn__downoload {
+    padding: 15px 42.375px 15px 41.625px;
+    border: 2px solid #FFF;
+    background-color: transparent;
+}
+
+.btn__downoload:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #222;
+}
+
+.btn__container {
+    display: flex;
+    gap: 8px;
+}
+
+
+.content__wrapper {
+    width: 94.5rem;
+    margin: 0 auto;
+}
+
+
+/* Section Friendly  start */
+.content {
+    display: flex;
+    align-items: center;
+    padding: 6rem 10.69rem;
+    gap: 7.97rem;
+}
+
+
+.friendly__title {
+    margin-bottom: 1.69rem;
+}
+
+.friendly__subtitle {
+    margin-bottom: 2.25rem;
+}
+
+/* Section Friendly  end */
+
+/* Section portfolio  start */
+.portfolio__title {
+    margin-bottom: 1.69rem;
+}
+
+.portfolio__subtitle {
+    margin-bottom: 2.25rem;
+}
+/* Section portfolio  end */
+
+
+/* Section parallax  start */
+
+.parallax {
+    height: 27.375rem;
+    background: url(../img/parallax.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.parallax__content {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 16.06rem 6rem 16.06rem;
+    justify-content: center;
+}
+
+.parallax__title {
+    margin-bottom: 1.56rem;
+    color: #FFF;
+}
+
+.parallax__subtitle {
+    margin-bottom: 2.25rem;
+    color: #FFF;
+}
+
+/* Section parallax  end */
+
+
+/* Section limitless start */
+.limitless__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 10.69rem 0rem 10.69rem;
+}
+
+.limitless__title {
+    margin-bottom: 1.69rem;
+}
+.limitless__subtitle {
+    margin-bottom: 2.25rem;
+}
+/* Section limitless end */
+
+/* Section latest projects start */
+
+.latest__projects {
+    background: #0E1015;
+}
+
+.latest__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 2.75rem;
+}
+
+.latest__title, .latest__subtitle {
+    color: #FFF;
+}
+
+.latest__title {
+    margin-bottom: 2.19rem;
+}
+
+.img__container {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.img__block{
+
+    flex: 1 1 25%; /* Растягивает изображения, чтобы занимать 1/4 ширины родителя, учитывая отступы */
+    max-width: 25%; /* Гарантирует, что изображения не будут превышать 25% ширины родителя */
+    height: auto;
+    margin-bottom: 7.29rem;
+   
+}
+
+.latest__img {
+    width: 100%;
+ 
+}
+
+.latest__img:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(34, 34, 34, 0.9) 100%);
+}
+
+.img__title-hover {
+    text-align: center;
+
+}
+
+/* Section latest projects end */
+
+
+/* Section customers  start */
+.customers {
+    height: 467px;
+    background: url(../img/customers.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.customers__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4.69rem 12.19rem;
+}
+
+.customers__title {
+    color: #FFF;
+    margin-bottom: 3.19rem;
+}
+
+.customers__subtitle {
+    color: #FFF;
+    margin-bottom: 1.75rem;
+}
+
+.img__container-customers {
+    display: flex;
+    flex-direction: column;
+}
+
+.customers__img {
+    border-radius: 3.125rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.customers__name {
+    color: #FFF;
+}
+/* Section customers  end */
+
+/* Section clients  start */
+.clients__content {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 6rem 10.69rem;
+}
+
+.clients__title {
+    margin-bottom: 3.94rem;
+}
+
+.clients__carousel {
+    display: flex;
+    gap: 14.53rem;
+}
+/* Section clients  end */
+
+
+/* Section wordpress  start */
+.wordpress {
+    background: #F5F5F5;
+}
+
+.wordpress__content {
+    display: flex;
+    justify-content: center;
+    padding: 4.5rem 10.69rem;
+
+}
+.wordpress__title {
+    margin: 0 8.94rem 0 8.02rem;
+}
+/* Section wordpress  end */
+
+
+.footer {
+    background: #0E1015;
+    height: 11.4375rem;
+}
+.footer__content {
+  padding: 4.5rem 10.69rem;
+}
+
+.footer__link {
+    color: #FEFEFE;
+}
+
+
+
+
+
+
