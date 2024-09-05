@@ -51,11 +51,11 @@ img {
 
 .header {
     margin: 0 auto;
-    display: flex;
-    width: 1512px;
+
     height: 77px;
     padding: 10px 186px 11px 186px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -63,10 +63,11 @@ img {
     display: flex;
     justify-content: space-between;
     margin: 11px 0;
-    width: 1140px;
+    /* width: 1512px; */
+    width: 100%;
     height: 56px;
-    
 }
+
 
 .link {
     color: #4C4C4C;
@@ -185,18 +186,30 @@ a:hover {
 
 
 .content__wrapper {
-    width: 94.5rem;
-    margin: 0 auto;
+    max-width: 1512px;
+ 
+    margin: auto;
 }
 
 
 /* Section Friendly  start */
-.content {
+/* .content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 6rem 10.69rem;
     gap: 7.97rem;
 }
+
+.friendly__container {
+    width: 100%;
+    height: 452.172px;
+} 
+
+.friendly__img {
+    width: 100%;
+    height: auto;
+} */
 
 
 .friendly__title {
@@ -205,6 +218,27 @@ a:hover {
 
 .friendly__subtitle {
     margin-bottom: 2.25rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+    padding: 6rem 10.69rem;
+    gap: 7.97rem;
+}
+
+.friendly__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.friendly__img {
+    max-width: 652.5px;
+    max-height: 452.172px;
 }
 
 /* Section Friendly  end */
@@ -266,6 +300,11 @@ a:hover {
 .limitless__subtitle {
     margin-bottom: 2.25rem;
 }
+
+.limitless__img {
+    width: 100%;
+}
+
 /* Section limitless end */
 
 /* Section latest projects start */
@@ -315,6 +354,66 @@ a:hover {
     text-align: center;
 
 }
+
+
+.img__title-hover {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+    z-index: 1000;
+}
+
+
+.img__block {
+    display: block; 
+    position: relative; 
+
+}
+
+.img__block::before {
+    cursor: pointer;
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(34, 34, 34, 0.9) 100%); 
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Добавьте плавный переход для наглядности */
+}
+
+.img__block:hover::before {
+    opacity: 1;
+}
+
+.img__title-hover {
+    opacity: 0;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.img__block:hover .img__title-hover {
+    opacity: 1;
+    animation: 0.5s show ease;
+   
+}
+
+
+@keyframes show {
+    0% {
+        bottom: 0%; /* Начальная позиция - за пределами экрана снизу */
+        opacity: 0; /* Элемент невидим в начале */
+    }
+    100% {
+        bottom: 50%; /* Конечная позиция - на своем месте */
+        opacity: 1; /* Элемент полностью видим */
+    }
+
+  }
+
 
 /* Section latest projects end */
 
@@ -413,64 +512,96 @@ a:hover {
 
 
 
-
-
-.img__title-hover {
-    color: #fff;
-    font-weight: 600;
-    font-size: 22px;
-    z-index: 1000;
-}
-
-
-.img__block {
-    display: block; 
-    position: relative; 
-
-}
-
-.img__block::before {
-    cursor: pointer;
-    content: ''; 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(34, 34, 34, 0.9) 100%); 
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Добавьте плавный переход для наглядности */
-}
-
-.img__block:hover::before {
-    opacity: 1;
-}
-
-.img__title-hover {
-    opacity: 0;
-    position: absolute;
-    bottom: 50%;
-    width: 100%;
-    cursor: pointer;
-}
-
-.img__block:hover .img__title-hover {
-    opacity: 1;
-    animation: 0.5s show ease;
-   
-}
-
-
-@keyframes show {
-    0% {
-        bottom: 0%; /* Начальная позиция - за пределами экрана снизу */
-        opacity: 0; /* Элемент невидим в начале */
-    }
-    100% {
-        bottom: 50%; /* Конечная позиция - на своем месте */
-        opacity: 1; /* Элемент полностью видим */
+@media only screen and (max-width: 1200px) {
+    .content {
+        padding: 96px 15px;
+        gap: 92px;
     }
 
-  }
+}
 
-  
+@media only screen and (max-width: 1026px) {
+
+    .header {
+        padding: 10px 24px 11px 24px;
+    }
+    .content {
+        padding: 96px 15px;
+        gap: 92px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .friendly__img {
+        width: 345px;
+        height: 239.08px;
+    }
+
+    .portfolio__img {
+        width: 345px;
+        height: 239.08px;
+    }
+
+    .img__block {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    .clients__carousel {
+        gap: 160px;
+
+    }
+
+    .wordpress__content  {
+        padding: 96px 9px;
+    }
+    .wordpress__title {
+        margin: 0;
+        text-align: center;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .clients__icon:nth-child(3), 
+    .clients__icon:nth-child(4) {
+        display: none;
+
+    }
+
+    .customers__content {
+        padding: 86px 62.5px;
+    }
+    .parallax__content {
+        padding: 96px 66px;
+    }
+}
+
+
+@media only screen and (max-width: 644px) {
+    .clients__icon:nth-child(3), 
+    .clients__icon:nth-child(4) {
+        display: none;
+
+    }
+
+    .customers__content {
+        padding: 86px 62.5px;
+    }
+    .parallax__content {
+        padding: 96px 66px;
+    }
+}
+
+
+
+
+
+
+
+
+
