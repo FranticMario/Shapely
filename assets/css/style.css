@@ -481,10 +481,30 @@ a:hover {
 
 .customers__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
+
+}
+
+.custumers__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 4.69rem 12.19rem;
+}
+
+.costumers__container {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.costumers__show {
+    display: flex;
+
 }
 
 .customers__title {
@@ -511,6 +531,16 @@ a:hover {
 
 .customers__name {
     color: #FFF;
+}
+
+.swipe__icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: #8c979e;
+}
+
+.swipe__icon:hover {
+    color: #fff;
 }
 /* Section customers  end */
 
@@ -750,6 +780,39 @@ a:hover {
 }
 
 
+
+.show__left {
+    animation: showLeft 0.5s ease-in-out;
+}
+
+.show__right {
+    animation: showRight 0.5s ease-in-out;
+}
+
+@keyframes showRight {
+    from {
+    transform: translateX(250%);
+      opacity: 0;
+    }
+    to {
+
+    transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes showLeft {
+    from {
+
+    transform: translateX(-250%);
+      opacity: 0;
+    }
+    to {
+
+    transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 
 

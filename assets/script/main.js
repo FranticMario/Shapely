@@ -28,3 +28,29 @@ const burger = () => {
 };
 
 burger();
+
+
+
+const swipe = () => {
+    const costumersContainer = document.querySelectorAll(".costumers__container");
+    const swipeIcon = document.querySelectorAll(".swipe__icon");
+
+    const showCostumers = (e) => {
+        let target = e.target
+        console.log(target)
+        costumersContainer.forEach(item=> {
+            if(item.classList.contains("costumers__show")) {
+              return  item.classList.toggle("costumers__show");
+            } else {
+               return item.classList.toggle("costumers__show")
+            }
+        })
+    }
+
+    swipeIcon.forEach(item =>  item.addEventListener("click", (e) => {
+        showCostumers(e)
+    } ))
+  
+}
+
+swipe()
