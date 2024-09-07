@@ -14,18 +14,20 @@
             </div>
 
             <ul class="menu">
-              <li><a class="link" href="#home">HOME</a></li>
-              <li><a class="link" href="#blog">BLOG</a></li>
-              <li><a class="link" href="#portfolio">PORTFOLIO</a></li>
-              <li><a class="link" href="#About-the-tests">ABOUT THE TESTS</a></li>
-              <li><a class="link" href="#LEVEL1">LEVEL</a>
-              <li><a class="link" href="#SHOP">SHOP </a></li>
+              <li class="menu__link"><a class="link" href="#home">HOME</a></li>
+              <li class="menu__link"><a class="link" href="#blog">BLOG</a></li>
+              <li class="menu__link"><a class="link" href="#portfolio">PORTFOLIO</a></li>
+              <li class="menu__link"><a class="link" href="#About-the-tests">ABOUT THE TESTS</a></li>
+              <li class="menu__link"><a class="link" href="#LEVEL1">LEVEL</a>
+              <li class="menu__link"><a class="link" href="#SHOP">SHOP </a></li>
             </ul>
         </nav>
 
-        <div class="burger">
-
-        </div>
+        <button class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
      </header>
 
 
@@ -57,7 +59,7 @@
         </div>
      </section>
 
-     <section class="portfolio">
+     <section class="portfolio" id="portfolio">
         <div class="content__wrapper">
             <div class="portfolio__container content">
                 <div class="portfolio__content ">
@@ -152,11 +154,14 @@
         <div class="content__wrapper">
             <div class="customers__content">
                 <h3 class="customers__title">What Our Customers Say</h3>
-                <p class="customers__subtitle">Integer ut rutrum nulla, sit amet fringilla nisi. Nam nisl velit, vehicula at nibh sed, porttitor sollicitudin ante. Sed justo augue, vestibulum ut efficitur vitae, euismod et justo. Mauris sed mattis ante. Ut ligula lectus, consequat vitae neque ac, gravida hendrerit ante.</p>
-                <div class="img__container-customers">
-                    <img src="./assets/img/mike-muller-150x150.jpg.png" alt="" class="customers__img">
-                    <p class="customers__name">John Doe</p>
+                <div class="costumers__container">
+                    <p class="customers__subtitle">Integer ut rutrum nulla, sit amet fringilla nisi. Nam nisl velit, vehicula at nibh sed, porttitor sollicitudin ante. Sed justo augue, vestibulum ut efficitur vitae, euismod et justo. Mauris sed mattis ante. Ut ligula lectus, consequat vitae neque ac, gravida hendrerit ante.</p>
+                    <div class="img__container-customers">
+                        <img src="./assets/img/mike-muller-150x150.jpg.png" alt="" class="customers__img">
+                        <p class="customers__name">John Doe</p>
+                    </div>
                 </div>
+                
             </div>
         </div>
      </section>
@@ -201,5 +206,7 @@
 
         </div>
      </footer>
+
+     <script defer src="./assets/script/main.js"></script>
 </body>
 </html>
