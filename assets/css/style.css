@@ -80,6 +80,7 @@ img {
     width: 40px;
     height: 40px;
     border: none;
+    background-color: #fff;
 }
 
 .header__burger span {
@@ -539,7 +540,8 @@ a:hover {
 
 .swipe__icon {
     cursor: pointer;
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: 700;
     color: #8c979e;
 }
 
@@ -562,8 +564,40 @@ a:hover {
 
 .clients__carousel {
     display: flex;
-    gap: 14.53rem;
+    /* gap: 200px;
+    width: 840px; */
+    overflow: hidden;
+    position: relative;
+    
 }
+
+.clients__icon {
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+    cursor: pointer;
+
+    transition: all ease 0.5s;
+}
+
+.clients__icon:hover {
+    opacity: 1;
+}
+
+.slider {
+    width: 840px;
+    overflow: hidden;
+}
+
+
+.slider__line {
+    display: flex;
+    gap: 200px;
+    width: 2340px;
+    position: relative;
+    transition: all ease 0.5s;
+}
+
 /* Section clients  end */
 
 
@@ -629,9 +663,6 @@ a:hover {
         gap: 92px;
     }
 
-    /* .menu {
-        display: none;
-    } */
 
     .friendly__img {
         width: 345px;
@@ -648,10 +679,10 @@ a:hover {
         max-width: 50%;
     }
 
-    .clients__carousel {
+    /* .clients__carousel {
         gap: 160px;
 
-    }
+    } */
 
     .wordpress__content  {
         padding: 96px 9px;
@@ -681,21 +712,30 @@ a:hover {
         transform: translateX(-100%);
     }
 
-    /* .menu li {
-        display: block;
-    } */
+    .custumers__wrapper {
+        padding: 4.69rem 4.19rem;
+    }
+
+    .slider__line {
+        gap: 130px;
+        width: 950px;
+    }
+
+    .slider {
+        width: 630px;
+    }
 }
 
 
 
 @media only screen and (max-width: 767px) {
-    .clients__icon:nth-child(3), 
+    /* .clients__icon:nth-child(3), 
     .clients__icon:nth-child(4) {
         display: none;
 
-    }
+    } */
 
-    .customers__content {
+    .custumers__wrapper {
         padding: 86px 62.5px;
     }
     .parallax__content {
@@ -732,7 +772,7 @@ a:hover {
 
     }
 
-    .customers__content {
+    .custumers__wrapper {
         padding: 86px 62.5px;
     }
     .parallax__content {
@@ -760,6 +800,10 @@ a:hover {
     .footer__wrapper {
         padding: 87px 15px 72px 15px;
     }
+
+    .slider {
+        width: 250px;
+    }
 }
 
 
@@ -773,7 +817,7 @@ a:hover {
         padding: 15px;
     }
 
-    .customers__content {
+    .custumers__wrapper {
         padding: 75px 15px;
     }
 
@@ -785,13 +829,6 @@ a:hover {
 
 
 
-.show__left {
-    animation: showLeft 0.5s ease-in-out;
-}
-
-.show__right {
-    animation: showRight 0.5s ease-in-out;
-}
 
 @keyframes showCostumers {
     from {

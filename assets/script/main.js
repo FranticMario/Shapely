@@ -55,3 +55,28 @@ const swipe = () => {
 }
 
 swipe()
+
+const sliderLine = document.querySelector(".slider__line");
+const sliderWrapper = document.querySelector(".slider");
+const styles = window.getComputedStyle(sliderLine); 
+
+// Преобразуем строковое значение gap в числовое, убрав 'px'
+const gap = parseFloat(styles.gap) || 0;  
+let offset = 0;
+
+// Считаем ширину с учётом gap
+const sliderWidth = gap + 60;
+
+const maxOffset = sliderLine.scrollWidth - sliderWrapper.clientWidth;
+console.log(maxOffset)
+const slider = () => {
+    offset -= sliderWidth; 
+
+    if (offset < -maxOffset) {
+        offset = 0; 
+    }
+
+    sliderLine.style.left = offset + "px";
+}
+
+setInterval(slider, 2000);
