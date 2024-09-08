@@ -500,6 +500,7 @@ a:hover {
     align-items: center;
     transition: opacity 0.3s ease;
     position: relative;
+    animation: showCostumers 0.5s ease-in-out;
 }
 
 .costumers__show {
@@ -789,30 +790,18 @@ a:hover {
     animation: showRight 0.5s ease-in-out;
 }
 
-@keyframes showRight {
+@keyframes showCostumers {
     from {
-    transform: translateX(250%);
+
       opacity: 0;
     }
     to {
 
-    transform: translateX(0);
+
       opacity: 1;
     }
   }
 
-  @keyframes showLeft {
-    from {
-
-    transform: translateX(-250%);
-      opacity: 0;
-    }
-    to {
-
-    transform: translateX(0);
-      opacity: 1;
-    }
-  }
 
 
 
